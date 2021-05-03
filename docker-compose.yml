@@ -1,0 +1,12 @@
+---
+version: '3.8'
+services:
+    db:
+        image: mysql/mysql-server:latest
+        container_name: my-mysql
+        ports:
+            - "33066:3306"
+    app:
+        build:
+            context: ./app/
+        container_name: my-python
